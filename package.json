@@ -1,0 +1,35 @@
+{
+  "name": "yumiri",
+  "version": "0.0.1",
+  "description": "花守ゆみりさんの最新情報を簡単に取得するためのコマンドラインツール",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .; cpx 'src/templates/**/*' dist/templates;",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "author": "noradium",
+  "license": "MIT",
+  "bin": {
+    "yumiri": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "commander": "^2.11.0",
+    "cpx": "^1.5.0",
+    "dateformat": "^2.0.0",
+    "ejs": "^2.5.6",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.9.1",
+    "@types/dateformat": "^1.0.1",
+    "@types/ejs": "^2.3.33",
+    "@types/request-promise-native": "^1.0.6",
+    "typescript": "^2.4.1",
+    "typings": "^2.1.1"
+  }
+}
