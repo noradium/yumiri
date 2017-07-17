@@ -13,11 +13,6 @@ commander
   })
   .parse(process.argv);
 
-if (typeof argService === 'undefined') {
-  console.error('invalid service');
-  process.exit(1);
-}
-
 const action = getAction(argService);
 
 if (!action) {
