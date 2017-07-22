@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p .; cpx 'src/templates/**/*' dist/templates;",
+    "compile": "tsc -p .",
+    "copy": "cpx 'src/templates/**/*' dist/templates",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
@@ -21,6 +23,7 @@
     "dist"
   ],
   "dependencies": {
+    "cheerio-httpcli": "^0.7.0",
     "commander": "^2.11.0",
     "cpx": "^1.5.0",
     "dateformat": "^2.0.0",
